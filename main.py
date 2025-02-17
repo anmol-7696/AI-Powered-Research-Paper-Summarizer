@@ -3,7 +3,7 @@ import requests
 
 def download_pdf(url, pdf_path):
     """Download PDF from a URL."""
-    response = requests.get(url)
+    response = requests.get(url, timeout = 60)
     with open(pdf_path, 'wb') as f:
         f.write(response.content)
 
