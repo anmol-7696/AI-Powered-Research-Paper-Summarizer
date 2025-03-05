@@ -1,0 +1,11 @@
+{
+    "pdf": {
+      "url": "https://ir.vignan.ac.in/id/eprint/586/1/28.pdf",
+      "local_path": "downloaded_paper.pdf",
+      "extracted_text_path": "extracted_text.txt"
+    },
+    "logging": {
+      "enable_debug": true
+    }
+  }
+  

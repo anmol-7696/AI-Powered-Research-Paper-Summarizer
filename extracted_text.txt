@@ -1,0 +1,1528 @@
+Journal of Energy Storage 43 (2021) 103225
+2352-152X/© 2021 Elsevier Ltd. All rights reserved.
+A technological overview & design considerations for developing electric 
+vehicle charging stations 
+Rajanand Patnaik Narasipuram a,b,*, Subbarao Mopidevi b 
+a OLA Electric Technologies Pvt Ltd, Bengaluru, India 
+b Department of Electrical and Electronics Engineering, Vignan’s Foundation for Science, Technology & Research, Guntur, India   
+A R T I C L E  I N F O   
+Keywords: 
+EV charging station 
+Optimization 
+Renewable energy 
+Energy storage system 
+Off-grid 
+Battery electric vehicle 
+Hybrid electric vehicle 
+Hydrogen fuel cell electric vehicle 
+V2G 
+Battery swapping 
+A B S T R A C T   
+In recent years, it is seen that there has been a huge expansion in the electric vehicles market aiming to reduce 
+the impact of greenhouse gases. The deployment of an optimal and cost-effective electric vehicle charging sta­
+tions similar to petrol/diesel stations with advanced control algorithms is necessary for the successful imple­
+mentation. This review paper gives an overview of electric vehicles and various configurations about the design 
+aspects of charging station. The charging stations are categorized on the basis of power utilized with various 
+optimization algorithms, methods and future directions are presented to have an optimal design. And also, the 
+highlights of grid connected combination of renewable energy based and grid connected, off-grid mode are 
+summarized along with the future scope. Incorporation of renewable energy along with storage systems in the 
+charging station can reduce the high load taken from the grid especially at peak times. By providing an overview 
+of these key areas, the review study aims to provide a deep insight to the industry experts and researchers for 
+future developments.   
+1. Introduction 
+One of the significant contributions in the transport field is the 
+development of Internal Combustion (IC) Engine vehicles. However, 
+larger number of automobiles have created serious problems in the life 
+of humans. Air pollutants, global warming and the rapid emptying of oil 
+supplies on earth creates a major threat to the environment. The various 
+factors related to fuel usage and carbon dioxide(CO2) emissions on the 
+road are studied in [1]. With reference to the studies done in the motor 
+vehicles, it has been estimated that majority of the exhaust gases are 
+produced in the first 300 s. The major factors which causes pollution are 
+dependent on the road, temperature, vehicle speed and mass [2]. In the 
+analysis from China’s passenger vehicles, it can be inferred that the 
+emitted greenhouse gases will raise within 2027 at the level of 810 
+megaton(mt) carbon dioxide equivalent (CO2e) [3]. 
+In recent years, researchers are focused in developing a clean, effi­
+cient and smart vehicles incorporating Renewable Energy Technologies. 
+Therefore, there exist the deployment of Electric and Hybrid vehicles, 
+Fuel cell vehicles in focus of a green transport sector. With reference to 
+the studies conducted from the literature it can be seen that replacement 
+of Internal Combustion Engine vehicles with Electric vehicles (EVs) in 
+2017 promoted reduction in oxides of nitrogen [4].There are many 
+technologies developed in the market of Electric vehicles. In order to 
+enhance the safety of electric vehicles a new slip control system is pro­
+posed. The main focus includes safety of vehicles, better acceleration 
+and braking, maintaining the driver’s safety, comfort and reduced usage 
+of power [5]. 
+Even though there are many technologies which are incorporated in 
+Electric vehicles, there are some obstacles which has to be tackled for the 
+fulfilment of a green transport sector. The major limitations that the 
+electric vehicles facing today includes lack of charging facilities, long 
+battery charging time and range anxiety. Fostering the electric vehicle 
+(EV) industry an efficient well-equipped charging station that meets the 
+vehicles requirement should be constructed. In order to encourage the 
+electric vehicle manufacturers, the foremost thing is to identify an 
+appropriate location and sizing for a charging station [89-90]. There are 
+wide developments in view of developing an Electric Vehicle Charging 
+Station (EVCS). 
+The main moto of this paper is there are many literatures available in 
+the open source research network. But many of the papers failed to 
+explain the design requirements for EVCS in various aspects. This paper 
+mainly focuses on an overview of Electric vehicles and various config­
+urations in the design aspects of Electric vehicle charging stations. 
+* Corresponding author. 
+E-mail address: rajanand.ee@gmail.com (R.P. Narasipuram).  
+Contents lists available at ScienceDirect 
+Journal of Energy Storage 
+journal homepage: www.elsevier.com/locate/est 
+https://doi.org/10.1016/j.est.2021.103225 
+Received 8 June 2021; Received in revised form 4 September 2021; Accepted 5 September 2021   
+
+Journal of Energy Storage 43 (2021) 103225
+2
+Design of EVCS is done based on the power utilized. Various Algorithms 
+and optimization methods are incorporated in order to have an optimal 
+design. 
+The review paper is divided into mainly 6 sections. First section 
+consists of introduction part where a brief overview of the review paper 
+objective is presented. An overview of electric vehicles is described in 
+the Section 2 where different categories of electric vehicles and the 
+impacts of the electric vehicles are described. The Section 3 deals with 
+Electric vehicle charging. Battery swapping, three different levels of 
+charging are presented here. Section 4 deals with design aspects of 
+EVCS, which is the core part of the review study. It consists of various 
+optimization techniques used in the design and various configurations of 
+Electric vehicle charging stations. Design of EVCS is categorized based 
+on the power utilized. Results and discussion are presented in Section 5 
+and finally Section 6 presents the conclusion. 
+The main key contributions are:  
+1 Various Electric Vehicle Transportation Overview  
+2 The various configurations about the design aspects of charging 
+stations are discussed and are categorized on the basis of power 
+utilized.  
+a Battery Swapping Technology.  
+b Charging Station utilizing only grid power.  
+c Charging Station utilizing grid power and Energy Storage System.  
+d Charging station utilizing grid power and Renewable energy. 
+e Charging Station utilizing grid power, Renewable energy and En­
+ergy Storage System.  
+f Off-grid Charging Station. 
+3 And also, Various optimization algorithms, methods and future di­
+rections are described in this review study to have an optimal design.  
+4 The highlights of grid connected, combination of renewable energy 
+based and grid connected, off-grid mode is summarized along with 
+the future scope in the review study.  
+5 Incorporation of renewable energy along with storage systems in the 
+charging station can reduce the high load taken from the grid espe­
+cially at peak times. 
+2. An overview of electric vehicles 
+An Electric vehicle contains one or more electric motors for its 
+traction and obtain its power from rechargeable batteries which is 
+contained in the vehicle. In order to have a pollution free atmosphere, an 
+Electric vehicle is a suitable option. It is noted that the shift from IC 
+engine powered vehicles to EVs reduces net CO2 emissions. It is also 
+estimated that the average CO2 avoidance for the entire world is 16.24% 
+under current conditions [6]. In order to promote the Electric vehicle 
+industry, EVs tariffs should be such that it will minimize refuelling and 
+grid reinforcement costs [7]. To promote Electric vehicle manufactures 
+it is essential to establish a suitable charging location to improve vehicle 
+range and anxiety regarding charging process [8,91,92]. 
+2.1. Categories of electric vehicles 
+2.1.1. Battery electric vehicles 
+Battery Electric Vehicle (BEVs) contains a battery, a motor and a 
+controller. BEVs are powered by high-capacity battery packs that can be 
+plugged into the mains from where the charging is done. Regenerative 
+braking is also established in BEVs where the motor acts as generator 
+and thereby the electrical energy obtained from the generator is stored 
+in the batteries. With reference to the case studies done in taxis and 
+private vehicles in Beijing, China, it can be identified that with home 
+and public charging facilities, BEVs can replace a large portion of gas­
+oline vehicles without affecting the transportation of individuals [9]. 
+Lithium–ion (Li-ion) batteries are mainly used by the EV manufac­
+tures for storing energy. The significant features of Li-ion batteries are 
+high energy density, less maintenance, various shapes, chemistries and 
+performances [10]. Li-ion batteries are more reliable and plays a vital 
+role in Electric vehicles [11]. Even though Li-ion batteries have a great 
+impact in Electric vehicles, a systematic study in the failure mechanisms 
+has to be considered for the smooth operation of Electric vehicles [12]. 
+BEVs uses external socket for charging the battery. Due to the contin­
+uous improvement in the market of Plug-in electric vehicles, there are 
+many technologies developed [13]. High fleet of Plug-in electric vehicles 
+leads to development of an intelligent management system for avoiding 
+negative impacts on distribution systems. Plug-in electric vehicles smart 
+charging methods are presented in [14,86–88]. 
+2.1.2. Hydrogen fuel cell electric vehicle 
+The basic principle of a hydrogen fuel cell electric vehicles (HFCEVs) 
+is that Hydrogen reacts with Oxygen to produce water and electricity 
+which powers the wheels of the vehicle. Fuel cells are electrochemical 
+devices similar to a battery that generates electricity to power an electric 
+motor utilizing hydrogen and oxygen. There are various types of fuel 
+cells based on the electrolyte used. Plug-in fuel cell electric vehicles 
+List of Abbreviations 
+A 
+Ampere 
+AC 
+Alternating Current 
+BEV 
+Battery Electric Vehicle 
+BFA 
+Binary Firefly Algorithm 
+BST 
+Battery Swapping Technology 
+CO2 
+Carbon dioxide 
+CO2e 
+Carbon dioxide equivalent 
+DCFC 
+Direct Current Fast Charging 
+EPRI 
+Electric Power Research Institute 
+ESS 
+Energy Storage System 
+EVCS 
+Electric Vehicle Charging Station 
+EVCS 
+Electric Vehicle 
+FCEV 
+Fuel Cell Electric Vehicle 
+GA 
+Genetic Algorithm 
+GA-PSO Genetic Algorithm - Particle Swarm Optimization 
+GOA 
+Grasshopper Optimization Algorithm 
+HEV 
+Hybrid Electric Vehicle 
+HFCEV 
+Hydrogen Fuel Cell Electric Vehicle 
+IC 
+Internal Combustion 
+kW 
+kilo-Watt 
+kWh 
+kilo-Watt hour 
+Li-ion 
+Lithium-ion 
+MINLP 
+Mixed Integrator Non-Linear 
+MPDIPA Modified Primal-Dual Interior Point Algorithm 
+mt 
+megaton 
+PFCEV 
+Plug-in Fuel Cell Electric Vehicle 
+PHEV 
+Plug-in Hybrid Electric Vehicle 
+PSO 
+Particle Swarm Optimization 
+PV 
+Photovoltaic 
+RESS 
+Renewable Energy Storage System 
+SAE 
+Society of Automotive Engineer 
+SEL 
+Substation Energy Loss 
+SOC 
+State-of-Charge 
+TEL 
+Transportation Energy Loss 
+V2G 
+Vehicle-to-Grid 
+VAC 
+AC Voltage 
+VDC 
+DC Voltage  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+3
+(PFCEVs) are the combination of BEVs and fuel cell electric vehicles 
+(FCEVs). With reference to the case study done in California, the per­
+formance of PFCEVs are far better than BEVs and FCEVs [15]. According 
+to the review status, it is seen that the current technologies are capable 
+to perform better. But it can be inferred that it is not reliable and the 
+intelligent methods are not satisfactory [16].With the incorporation of 
+well performed power electronic converters and improved research 
+methods the performance of fuel cell system can be improved [17]. 
+2.1.3. Hybrid electric vehicles 
+Hybrid Electric Vehicles (HEVs) combines the features of Electric 
+vehicle and Internal Combustion Engine vehicles. It has two or more 
+power sources. In order to establish a proper hybrid system, it is 
+essential to have a power management strategy. Thereby by imple­
+menting an optimal controlled method hybrid vehicle can provide better 
+fuel economy and improves efficiency of the system. [18]. Dynamic 
+Programming, a global optimization technique is essential in the ap­
+plications of Energy Management Strategy research  [19].It is seen that 
+Adaptive Energy Management Strategy have better fuel economy rather 
+than rule based [20]. The most prominent classification of Hybrid 
+Electric vehicle is Plug-in Hybrid Electric vehicles[PHEVs]. Due to the 
+large penetration of Plug-in Hybrid Electric vehicle, there needs a con­
+trol mechanism to regulate the multiple loads fed to the grid. An esti­
+mation of distribution Algorithm [EDA] for effectively managing a huge 
+number of PHEVs is proposed in [21].It is seen that the proposed method 
+were also compared with other techniques in order to specify its 
+uniqueness. There are various categories of Hybrid Electric vehicle 
+based on the configurations arrangement [22–25]. 
+The Fig. 1 describes the general variants of Vehicle Transportation. 
+The Table 1 exhibits the comprehensive view of IC Engine, HEV, HFCEV, 
+and BEV. 
+2.2. Impacts of electric vehicles 
+Due to the tremendous progress in the field of Electric vehicles in 
+view of depletion of greenhouse gas emissions, there have been more 
+demand for electric power. Deployment of Electric vehicles have created 
+more impacts in the power grid, Environment and Economy [25]. There 
+have been both positive as well as negative effects due to the deployment 
+of Electric vehicles. Fig. 2 describes an Outline of the effects of Electric 
+Vehicles. As described there are several affects will impact the power 
+grid, environment and economy. Due to vehicle charging methods the 
+grid will affects with several voltage fluctuations, notches, flickering, 
+imbalances, sag, swell and harmonics will restrict the power grid to 
+operate with several limitations. The grid technology to be improved in 
+the area of V2G (Vehicle-to-Grid), incorporation of smart grids and 
+renewable energy systems with advanced technologies, control system 
+designs and complex power system network. By keeping these factors, 
+the overall cost of the system will increase and complexity of the system 
+will ruin the efficiency. The EV’s are bestowed towards the improve­
+ment of air quality which implies, CO2 can also be substantially reduced 
+when compared to conventional vehicles. However, EV’s are silent 
+which can refine the environment with reduced noise levels [93–97]. 
+3. Electric vehicle charging modes 
+3.1. Charging modes 
+Tremendous increase in the market of Electric vehicle necessitates 
+the deployment of charging stations. Regulatory framework for charging 
+Electric Vehicles is proposed in [29]. Based on that various charging 
+modes such as EV private home charging mode, public charging mode 
+and fast charging modes are formed. The Electric Power Research 
+Institute (EPRI) and the Society of Automotive Engineers (SAE) classifies 
+charging levels as alternating current (AC) Level 1, AC Level 2, and 
+direct current fast charging (DCFC) Level 3 [30]. Level 1 charging is 
+considered as the slowest charging due its long-time consumption for 
+charging the electric vehicles. Whereas level 3 is considered as the 
+fastest charging level. The Table 2 describes types of charging modes. 
+3.1.1. Level 1 charging 
+This type of charging is mainly used in homes. It uses 120 V AC with a 
+current rating of 15 A or 20 A. This type of charging can take 8 to 16 h for 
+full charge of an EV battery. Level 1 charging are considered as the 
+cheapest method, provided it is time consuming. It doesn’t need any 
+additional equipment for charging. Home charging can draw a power of 
+1.4–1.9 kW. 
+3.1.2. Level 2 charging 
+Residential and Commercial charging stations incorporates Level 2 
+charging. It needs the installation of a charging unit and a cable. It also 
+requires single phase 240 V AC having a current rating up to 40 A for 
+private places. In additional three phase 400 V AC having a current 
+handling capacity up to 80A is needed for public installation [30]. The 
+charging time of level 2 charger is faster than level 1 charger. Level 2 
+charging mode takes 4 to 8 h for charging. This type of charging draws a 
+power of 7.7–25.6 kW Power. There are some benefits offered for 
+Electric Vehicle owners regarding installation of Level 2 home charging 
+stations [31]. 
+3.1.3. Level 3 charging 
+Level 3 charging is also termed as DC (Direct Current) fast charging. 
+It is considered as the most efficient and fastest charging method for 
+Electric vehicles which gives answer regarding range anxiety of electric 
+vehicles. DC Fast chargers are incorporated in commercial and public 
+places. This type of charging provides 80% charge in 10–15 min. It is one 
+of the promising technologies which will create a great impact in Elec­
+tric vehicle charging stations. Level 3 chargers require a 480 V or higher 
+rating of three phase circuits [32]. It is estimated that cost of DC fast 
+charging differs according to the station and usage pattern [33]. Table 3 
+describes some of the latest Electric Vehicles and its specifications in 
+India. 
+4. Design of electric vehicle charging station 
+The paramount concern of Electric vehicle is to establish a well- 
+equipped charging station that meets the requirements of Electric ve­
+hicles such as range anxiety, charging facilities and minimum charging 
+time. One of the threats faced by Electric vehicle is its charging time 
+duration when compared with Internal Combustion vehicles which takes 
+very few minutes for refuelling. Recently many technologies have 
+developed such as dc fast charging stations which takes less than 20 min 
+to recharge the vehicle [34]. A well-established charging station that 
+equips advanced control techniques necessitates the growth of Electric 
+vehicles. In view of developing a charging station one must note the 
+adverse impacts of Electric Power grid. Due to the high power taken 
+from Electric grid, there are various impacts created in the distribution 
+network that includes voltage fluctuations, issues during peak time, 
+Fig. 1. Variants of Transportation in E-Mobility.  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+4
+increased power losses, Transformer loading problems [35,36]. In view 
+of minimizing the adverse effect of electric power grid while designing 
+the EVCS, one must incorporate various renewable energy technologies 
+such as solar, wind and other sources. Electrical energy can be stored 
+during excess production of electricity and inexpensive (especially from 
+renewable energy sources) or when there is less demand and it should be 
+further returned to the grid especially during high electricity prices. In 
+order to facilitate this Battery Energy Storage Systems are used. 
+Table 1 
+Overview of Transportation in E-Mobility.  
+S. 
+No 
+Parameters 
+Conventional Vehicle 
+Battery Electric Vehicle 
+Hydrogen Fuel cell Electric 
+Vehicle 
+Hybrid Electric Vehicle 
+1 
+Main Source 
+Petrol/Diesel 
+Battery 
+Hydrogen and Fuel Cell Stacks 
+Petrol/Diesel + Battery 
+2 
+Propulsion 
+System 
+Internal Combustion Engine 
+(ICE) 
+Electric motor drive with connected 
+systems 
+Electric motor drive with 
+connected systems 
+ICE + Electric motor drive 
+3 
+Refuelling 
+System 
+Petrol/Diesel 
+Charging System 
+Charging System 
+Charging System + Petrol/Diesel 
+4 
+Advantages 
+More refuelling stations are 
+available, Range is good, 
+Higher Efficiency, Remote Charging, 
+Minimal Noise, Zero Emission 
+Good Efficiency, Low charge 
+time, Minimal Noise, Zero 
+Emission 
+Good Efficiency, Flexible to 
+operate in low charge conditions, 
+Low noise. 
+5 
+Disadvantages 
+More Noise, Higher in 
+generating the emissions, 
+Running cost is high 
+Range limitation, Charging Time is more, 
+Charging Infrastructure, Still updating the 
+technology. 
+Poor in technology due to lack of 
+infrastructure, Capital cost is 
+high 
+Technology Complex, Exhibits 
+minimal emission,  
+Fig. 2. Outline of the effects of Electric Vehicles [85].  
+Table 2 
+Various levels of charging modes.  
+Different 
+Conditions 
+Power Levels 
+Level-1 
+Level-2 
+Level-3 
+Grid Voltage 
+120/230 VAC 
+and 12 A to 16 A 
+208/430 VAC and 15 
+A to 80 A 
+308 to 600 VAC 
+or VDC and max 
+400 A 
+Power Range 
+<3 kW 
+<20 kW 
+>50 kW 
+Approximate 
+Charging Time 
+17 h 
+8 h 
+<30 min 
+Grid Supply Type 
+1-Phase 
+1-Phase or 3-Phase 
+3-Phase 
+Charging Type 
+Slow Charge 
+Semi-fast charge 
+Fast Charging 
+Battery Capacity 
+20 kWh 
+20 kWh 
+20 kWh 
+EV Charging Use 
+Residential 
+charger 
+Commercial spaces 
+such as malls, offices 
+etc., 
+EV Charging 
+Station required  
+Table 3 
+Latest Electric Vehicles and its specifications in the country India [84].  
+Electric 
+Vehicle 
+Battery 
+Capacity 
+(kWh) 
+Battery 
+type 
+Home 
+charging 
+Direct 
+Current fast 
+charging 
+Range 
+(km) 
+Hyundai 
+Kona 
+39.2 
+Lithium 
+-Polymer 
+6 h 10 
+min 
+57 min 
+452 
+MG ZS EV 
+44.5 
+Lithium- 
+ion 
+16 h 
+50 min 
+340 
+Tata Nexon 
+EV 2020 
+30.2 
+Lithium- 
+ion 
+8.5 h 
+60 min 
+312 
+Tata Tigor 
+EV 2019 
+21.5 
+Lithium- 
+ion 
+11.5 h 
+2 h 
+213 
+Mahindra e- 
+Verito 
+18.55 
+Lithium- 
+ion 
+11.5 h 
+1 h 30 min 
+140 
+Mahindra 
+e2o 
+15 
+Lithium- 
+ion 
+7 h 20 
+min 
+1 h 35 min 
+140  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+5
+4.1. Optimization techniques 
+Optimization is done for determining the optimal location and 
+thereby sizing of a charging station. Optimization is the process of 
+minimizing or maximizing a particular function for obtaining best 
+possible solution for a given problem under defined set of constraints. In 
+order to facilitate the design of an EVCS, suitable optimization algorithm 
+is necessary. Optimization for charging station has mainly four steps 
+such as to identify appropriate location [37,38], charging the vehicle by 
+using energy management approach and choosing an appropriate opti­
+mization technique based on the objective [39]. Various Optimization 
+techniques are used for the effective design of charging stations which 
+are as followed:  
+1 Game theory [40,41].  
+2 Ant Colony Optimization [42].  
+3 Learnable Partheno-Genetic Algorithm [43].  
+4 Gravitational Search Algorithm [44].  
+5 Genetic Algorithm [45].  
+6 Mixed Integer linear programming [46].  
+7 Differential evolution.  
+8 Multi-Agent Particle Swarm Optimization [47]. 
+In view of having an optimal design for charging station, it is 
+essential to determine the design variable which is to be optimized. With 
+reference to the literature [48], it can be identified that determining the 
+size of charging station, number of vehicles in the charging station, state 
+of the charge of battery, estimation of number of chargers to be placed in 
+the station, energy storage system’s capacity, power of converters are 
+essential parameters in the optimization. 
+4.2. Configurations for the design of electric vehicle charging station 
+Due to the increasing demand for Electric vehicles, there are large 
+advances in the charging stations. In view of promoting the charging 
+station it is essential to find the optimum location and sizing of charging 
+station. In view of this various technologies and algorithms are devel­
+oped. The different configurations of charging stations are categorized 
+based on the utilization of power.  
+1 Battery Swapping Technology.  
+2 Charging Station utilizing only grid power.  
+3 Charging Station utilizing grid power and Energy Storage System.  
+4 Charging station utilizing grid power and Renewable energy.  
+5 Charging Station utilizing grid power, Renewable energy and Energy 
+Storage System.  
+6 Off-grid Charging Station. 
+4.2.1. Battery swapping technology (BST) 
+Exchanging the completely depleted battery or nearly depleted bat­
+tery of electric vehicles with a fully charged battery is known as Battery 
+swapping. Due to the rapid deployment of Electric vehicles, there needs 
+an urge to develop Battery swap stations. Optimum models for battery 
+swap stations in the distribution systems are developed in [26]. A 
+modified differential evolution algorithm is used for solving the pro­
+posed method. In order to attain optimal operation in the Battery 
+Swapping Stations, many optimization techniques are proposed in [27, 
+28]. 
+By adopting the BST, the life of the battery packs will increase due to 
+slow charging and it generates the revenue to fleet owners in longer run. 
+The integration with grid or RESS (wind, solar and other modes of 
+charging) is easier due to less complexity. The main drawback of BST is 
+it can be adopted for less kWh due to heavy weight of the packing 
+technology, huge stock is required which is high capital investment and 
+charging infrastructure is required. 
+4.2.2. Charging station utilizing only grid power 
+Due to the rapid rise in the electric vehicle market, there needs an 
+urge to develop DC Fast charging stations. DC Fast charging stations are 
+similar to petroleum stations where charging of electric vehicle is done 
+within a few minutes. It is considered as the fastest charging mode. A 
+careful planning in the design of charging station is essential to regulate 
+the increasing demand of power taken from grid. Fig. 3 represents an 
+outline of charging station utilizing only grid power. Sizing of charging 
+station for Plug-in Electric vehicle is done using Markovian Demand 
+Characterization in [49]. Here, optimal sizing of waiting spaces and 
+chargers are determined based on the demand for charging. 
+The extension of this work can be carried out considering distributed 
+generators, Power distribution network and transportation network. The 
+improvement of voltage profile and reduction in network losses is per­
+formed in [50]. A modified primal-dual interior point algorithm 
+(MPDIPA) is used to solve the optimal problem aiming to decrease the 
+cost of the charging station. The factors such as traffic conditions, de­
+mand for charging is referred to be considered in the future. Minimi­
+zation of total cost of charging station is also done in [34]. The cost of 
+the land, charging cost, losses in the grid and vehicle due to the travel 
+are also included here. A Mixed Integer Non-Linear (MINLP) optimiza­
+tion is done for appropriate placement of charging station and sizing. 
+This is then solved by Genetic Algorithm. In order to support the long 
+distance travel, it is essential to design location and capacity of charging 
+station [51]. The optimization is done under a fixed budget constraint 
+solved by a customized neighborhood search strategy. The extension of 
+this work can be carried out using multiple charging facilities. Optimal 
+allocation of fast charging stations are performed using Binary Firefly 
+Algorithm(BFA) in [52]. 
+The objective of the proposed algorithm focuses on minimization of 
+cost with respect to transportation energy loss (TEL), substation energy 
+loss (SEL) and build-up (BU) cost due to charging of EV. In the literature 
+[53], Grid Partition Method and Genetic Algorithm is used for planning 
+charging station for EV. Here the solution obtained is a local optimum 
+rather than a global optimum solution. 
+4.2.3. Charging station utilizing grid power and energy storage system 
+The increasing demand for electrical power in the charging stations 
+is a great threat faced by distribution network. Therefore, increasing 
+demand for electrical energy necessitate the need for Energy Storage 
+Systems [54]. Fig. 4 represents a charging station utilizing grid power 
+and Energy storage system. Energy Storage System (ESS) not only en­
+hances distribution network performance but also station cost. Imple­
+mentation of ESS in a fast charging station is done as a prototype [55]. A 
+LabVIEW (visual programming language) control interface is also 
+implemented. Optimum size of a fast charging station storage system is 
+determined by [56]. 
+The main objective carried out in the proposed method is to reduce 
+storage system cost and thereby cost of the charging station. Simulations 
+were carried out using MATLAB-Simulink. A control strategy was 
+implemented along with a flywheel energy storage system (FESS) in 
+[57]. Aiming to sustain the continuous charging process of the battery 
+FESS is incorporated. The proposal was validated by a lab-scale proto­
+type. A simulation model has been introduced to find the optimal design 
+of ESS in [58]. It is estimated that lithium-ion batteries will be a 
+prominent energy storage technology by 2025. Computational pro­
+gramming was done using Python programming. Deployment of fast 
+charging stations are also implemented for battery bus systems in [59]. 
+The model suggests that energy storage systems are a real solution for 
+the growing demand for charging. The suggested model is a mixed 
+integer linear programming model and solved using a CPLEX solver on a 
+Dell computer. 
+4.2.4. Charging station utilizing grid power and renewable energy 
+Rapid deployment of electric vehicles has led to increasing demand 
+for electrical energy. Aiming to meet the surplus energy demand, 
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+6
+utilization of renewable energy sources along with grid power are 
+needed for the design of charging station. Fig. 5 represents a charging 
+station utilizing grid power and renewable energy. Aiming for an opti­
+mum and quality exchange of power, Fast EV Charging station are in­
+tegrated with grid in [60]. Here a solar Photovoltaic (PV) generation 
+system is integrated with the fast charging station for an Energy Man­
+agement Strategy. 
+An optimum energy management is obtained by incorporating solar 
+PV and thereby reducing the losses. Simulations were carried out using 
+MATLAB-Simulink. In addition to sizing and placing of charging sta­
+tions, it is also focused on sizing and placement of distributed genera­
+tions, shunt capacitors by using Grasshopper optimization Algorithm 
+[GOA] in [61]. This improves the power factor of the substation and 
+thereby reduces the losses. Fast converging properties of GOA over 
+Genetic Algorithm [GA] over Particle Swarm Optimization [PSO] is also 
+analyzed. An optimal static scheduling scheme for charging is proposed 
+in [62]. Particle Swarm Optimization is used for the proposed method 
+and later compared with Priority Algorithms for its significance. 
+A micro grid concept is also carried out for reducing the load from 
+the grid and charging cost by properly transferring the EV loads. Aiming 
+for reduction in power loss, charging cost and strengthening the voltage 
+stability a Differential Evolution Algorithm is used in [63]. Similarly, an 
+optimal placement and sizing of Renewable Energy Sources and Electric 
+Vehicle charging stations simultaneously is done using hybrid optimi­
+zation technique such as Genetic Algorithm –Particle Swarm Optimi­
+zation (GA-PSO) in [64]. This methodology reduces losses, voltage 
+deviations and cost by using Electric vehicles as active power sources. 
+Even though incorporation of renewable energy sources along with grid 
+power in the charging stations reduces the burden in the distribution 
+network, a storage system is essential especially during peak times. 
+Fig. 3. Charging Station utilizing only grid power.  
+Fig. 4. Charging Station utilizing grid power and Energy Storage System [ESS].  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+7
+4.2.5. Charging station utilizing grid power, renewable energy and energy 
+storage system (ESS) 
+The increasing demand for electrical energy in the charging stations 
+will affect the performance of grid. Therefore, it is essential to incor­
+porate renewable energy sources along with the charging station to 
+support the grid by providing additional power especially during peak 
+times. ESS are installed in the charging stations to store and release the 
+energy thereby balancing the issues faced from power grid. Installations 
+of Energy Storage Systems in the charging stations helps to decrease the 
+uncertainty in renewable energy power generation. Batteries are mainly 
+used as storage systems. 
+Fig. 6 represents a charging station utilizing grid power, renewable 
+Fig. 5. Charging station utilizing grid power and Renewable energyTop of Form.  
+Fig. 6. Charging Station utilizing grid power, Renewable energy and Energy Storage System (ESS).  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+8
+energy and Energy storage system. Integration of charging station with 
+grid and wind energy which is solved using GAMS(General Algebraic 
+Modelling System) tool box is done in [65]. The station contains slow, 
+medium and fast chargers. The proposed method contains a storage 
+system in which 85% of its energy can be discharged in an hour. Since 
+solar energy have more uncertainties and variations compared to wind 
+energy, the proposed method suggests to model solar energy in future. 
+Design of fast charging station incorporating renewable energy sources 
+and storage systems are performed using Genetic Algorithm [66,67]. 
+With reference to the literature it can concluded that incorporation of 
+renewable energy sources along with storage systems lessen the high 
+impact on the grid. But it needs a large investment for the imple­
+mentation. EVCS is designed with slow, medium and fast chargers in 
+[68]. 
+The station contains Battery Energy storage system, diesel generator 
+and solar panels. In future environmental pollutions, hydrogen and fuel 
+cell vehicles, effects on upstream electric network can be incorporated in 
+the model. An efficient design of charging station for optimal power 
+management is performed using MATLAB/Simulink [69]. In the pro­
+posed method EVCS is integrated with solar energy and Battery Energy 
+Storage System. The charging of battery electric vehicles at work places 
+in Netherlands is investigated using solar energy [70]. It was estimated 
+that usage of a small storage system of 10 kWh decreased the energy 
+exchange from the grid by 25%. The outcome from this literature reveals 
+that it was not so effective during winter season. In order to minimize 
+the lifecycle cost, optimal design of EVCS is done considering environ­
+mental emissions [71] Architecture of Charging Station design is done 
+using HOMER Software. The method highlights that the usage of solar 
+energy with ESS based isolated EVCS could have more benefits through 
+grid connectivity. 
+An optimal sizing of a stand-alone micro grid with renewable energy 
+sources and storage systems is done in [72]. The proposed design is done 
+using Simulink Design Optimization [SDO]. The proposed method pro­
+vide energy for charging electric and fuel cell vehicles. The main gap in 
+the proposed method is that very few algorithms can be used with SDO. 
+A DC micro grid set up is incorporated for fully electric and plug-in 
+hybrid vehicles in [73].The proposed architecture incorporates vehicle 
+to grid operations, renewable energy sources and energy storage system. 
+ESS plays a vital role in reducing the impact from the grid. In addition to 
+this hierarchical energy management is adopted for real time applica­
+tion in [74]. 
+Monte Carlo simulation is adopted to deal with uncertainties, Ge­
+netic Algorithm is used for optimization, Renewable energy, ESS and 
+charging stations are considered for a new expansion model in [75]. 
+Here, K-means clustering algorithm is used which is solved in Matlab 
+programming. The proposed work can be improved in the future by 
+considering the possibility that Electric vehicle can inject power into the 
+network when unused. A combination of multi agent system and particle 
+swarm optimization known as multi-agent particle swarm optimization 
+(MAPSO) is proposed for optimization of grid connected renewable 
+energy sources, energy storage and EVCS in [47]. The results confirmed 
+that it has more accuracy and convergence speed when compared with 
+Particle Swarm Optimization (PSO) and it minimizes the Cost of Elec­
+tricity [COE]. An optimum energy management approach is proposed 
+for the minimal intake of grid power and storage of PV energy in [76]. 
+The model is simulated in Matlab/Simulink. A prototype model was also 
+developed and experimented in the laboratory. Optimal operation 
+model of PV assisted charging station is built in [77]. 
+The model is solved by Particle Swarm optimization model. It is 
+observed that through the appropriate coordination of Electric vehicles, 
+PV power generation units and energy storage devices, optimum per­
+formance of charging station can be achieved. In [78] modelling of EVCS 
+expansion is proposed using a hybrid algorithm combining Sample 
+Average Approximation and Progressive Hedging Algorithm. It is rec­
+ommended that different conditions of state-of-charge (SOC), traffic 
+patterns, variations in electric power could be included in the future 
+expansion of this proposed model. Integration of renewable energy 
+sources along with ESS with grid can store energy coming from 
+renewable energy sources and also can feedback to grid when required. 
+Utilization of renewable energy sources reduces the impact of high 
+power taken from the grid especially during the peak times. 
+4.2.6. Off-grid charging station 
+Off-grid charging stations are powered from distributed energy 
+sources rather than utility grid. Therefore, one must give utmost care in 
+the design and implementation of off-grid charging stations. An optimal 
+Algorithm to design and implement off-grid charging station for electric 
+and fuel cell vehicles is proposed in [79]. The uncertainty in the pa­
+rameters as well as design of charging station is done by stochastic 
+programming. Diesel generator is also included in the charging station 
+thereby reduction of cost by 15%. Implementation of renewable energy 
+systems in an off-grid EVCS for a villages is proposed by [80]. 
+The proposed strategy uses wind energy, solar energy and an ESS to 
+prevent the usage of diesel generators. However, there are several fac­
+tors that one must encounter in order to propose a charging station 
+utilizing renewable energy. A charging station consisting of renewable 
+energy sources and fuel cell system for plug-in hybrid electric vehicles is 
+proposed in [81]. Fuel cell system act as the storage device instead of 
+batteries in the charging station. A microcontroller MC68HC11E9 pro­
+gramming is utilized here. In future, a grid tied version of proposed 
+charging station is recommended. A solar charging station for electric 
+vehicles incorporating storage backup is modelled in [82]. The proposed 
+charging station is environment friendly. A micro grid connected with 
+renewable energy sources is proposed for electric vehicle charging sta­
+tions in [83]. The main focus is to reduce the power flow issues faced in 
+United Kingdom national transmission system. The proposed method is 
+simulated using MATLAB-Simulink tool boxes. Even though these 
+technologies are more environmentally friendly compared to other 
+techniques, while designing these charging stations one must consider 
+the availability of the resources in order to meet the increasing demand 
+for electric supply for the charging stations. The Table 4 describes the 
+merits and demerits of various EV Charging Configurations. 
+5. Results and discussion 
+This section discusses the overall outlook of the review study. In view 
+of developing a pollution free environment, EV is considered as a 
+promising forthcoming option. There is a tremendous increase in the 
+development of electric vehicles in order to promote a pollution free 
+environment. Development of various charging stations are in progress 
+for meeting the increasing demand for power. There are different op­
+tions in which electric vehicle can be charged. In view of developing a 
+public charging station, level 3 charging mode, which is also termed as 
+DC fast charging is the best option for charging within short time 
+duration. It can be implemented in public charging stations similar to 
+petrol/diesel stations. Level 3 charging mode can be implemented in the 
+electric vehicle charging stations in order to charge the vehicles within 
+short time. It usually requires high power circuits for charging. It gives a 
+solution concerned with range anxiety of electric vehicles. 
+The various factors that can be noted for building up an effective 
+charging station. 
+5.1. Identification of optimal location 
+It is essential to have an optimal location for building an effective fast 
+charging station. One must consider the availability of uninterrupted 
+grid power, land cost, environmental factors for the selection of an apt 
+location for the charging station. It is also noted that placing a charging 
+station should be done in such a way that electric vehicles can be easily 
+accessed to the charging station [37].Travelling behavior of the electric 
+vehicle should also be taken into account in consideration of suitable 
+location for the charging station [38]. Charging station utilizing only 
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+9
+grid power creates various impacts in the distribution network [25]. 
+Therefore, it is essential to incorporate Renewable energy sources along 
+with the charging station. Integration of Battery Energy Storage Systems 
+helps in reducing the uncertainty associated with renewable energy 
+sources. In order to determine suitable location for charging station, it is 
+worthwhile to note the availability of renewable energy sources. The 
+variations associated with renewable energy sources should be analyzed 
+for the location of charging station. 
+5.2. Grid connected, renewable energy-based charging station 
+The various configurations of the charging station which is catego­
+rized based on the power utilized can be studied in Section 4. The large- 
+scale deployment of electric vehicles leads to the development of well- 
+equipped charging station. Due to the penetration of the increasing 
+number of electric vehicles, there is an urge to extract more power from 
+the grid for the EVCS. Therefore, a careful analysis in the design of 
+charging station is essential to meet the increasing demand for power 
+needed for charging the electric vehicles. Energy Storage Systems play a 
+vital role in storing excess energy and release the energy when there is 
+excess demand. Therefore, it is essential to incorporate battery energy 
+storage systems along with the charging station. Table 5 summarizes the 
+review aspects analyzed in Grid connected charging station. 
+Due to the tremendous increase in the development of electric ve­
+hicles, there is a huge demand for electrical energy to meet the charging 
+demand for electric vehicles. Integrating charging station with renew­
+able energy sources such as solar, wind etc. lessen the impact of high 
+power taken from the grid. Implementing energy storage systems in the 
+charging station provides a solution for the uncertainty in the renewable 
+energy power production. In order to integrate renewable energy along 
+with grid connected charging station, it is essential to find out an 
+appropriate location where renewable energy is abundant in nature. An 
+appropriate energy management system should be maintained to have 
+an optimal design of charging station. Table 6 analysis the review as­
+pects carried out in grid connected charging station along with renew­
+able energy. 
+5.3. Selection of optimization technique 
+A cost-effective charging station utilizing advanced techniques is 
+essential for the successful implementation of charging station. Table 7 
+summarizes the techniques used in the design of charging station. It can 
+be noted that Genetic Algorithm can handle complex problems and is 
+faster in finding solutions to the problems [34,53,66,67,74]. Binary 
+firefly Algorithm can also be used to solve large scale problems [51,52]. 
+It can be analyzed from the literature that differential evolution algo­
+rithm requires huge computation time when compared with Genetic 
+Algorithm-Particle Swarm Optimization hybrid Algorithm [63]. GOA 
+and Particle Swarm Optimization are also used to solve problems 
+regarding optimization [62,77]. It can be inferred that Multi-Agent 
+Particle swarm optimization have more accuracy and convergence 
+speed when compared with Particle Swarm Optimization [47]. Grass­
+hopper optimization technique have fast converging behavior when 
+compared with Genetic Algorithm and Particle Swarm optimization 
+[61]. 
+5.4. Energy management approach 
+The upcoming transport industry which solely depends on electric 
+vehicle, construction of EVCS plays a vital role. With reference to the 
+previous literatures focusing on design of EVCS it can be identified that 
+in order to reduce the negative impacts from the grid, incorporation of 
+renewable energy and storage systems are essential. An appropriate 
+energy management is essential for maintaining optimum flow of energy 
+among the various components in the charging station. An optimum 
+energy management is focused based on the power flow in [60]. 
+Renewable energy integration with the charging station reduces the 
+dependency from the grid. Energy management of the charging station 
+should be simulated for evaluating the station’s operations [66,67]. An 
+appropriate co-ordination between renewable energy sources, storage 
+system, grid with the charging station is needed for the power man­
+agement [69,74]. The main focus of the energy management approach is 
+the minimal usage of grid power and maximize the usage of renewable 
+energy [76]. 
+Table 4 
+Overview of EV charging configurations.  
+EV Configurations 
+Merits 
+Demerits 
+Battery Swapping 
+Technology 
+• Life of the battery 
+packs will increase. 
+• Feet owners will 
+get benefited in 
+longer run. 
+• Waiting time is less. 
+• Initial cost is high to 
+setup. 
+• Charging Infrastructure is 
+required. 
+• The global OEM’s need to 
+standardize the battery 
+voltage, energy density and 
+formfactors. 
+Charging Station utilizing 
+only grid power. 
+• Running cost will 
+be less. 
+• It can be helpful in 
+peak load levelling. 
+• Easy in operation. 
+• Overloading the grid. 
+• Charging infrastructure is 
+required with high capital 
+cost. 
+Charging Station utilizing 
+grid power and Energy 
+Storage System. 
+• Flexible in 
+operating when 
+failure occurs. 
+• ESS will give 
+benefits to the 
+owners. 
+• Complex in system. 
+• Integration with grid is a 
+major drawback. 
+• Capital investment is 
+high. 
+Charging station utilizing 
+grid power and 
+Renewable energy. 
+• Renewable Energy 
+Station will generate 
+the revenue. 
+• Capital investment is 
+high. 
+• Implement new/novel 
+efficient algorithms which 
+it increases cost of the 
+system. 
+Charging Station utilizing 
+grid power, Renewable 
+energy and Energy 
+Storage System. 
+• Running cost is too 
+low. 
+• Helpful to charge 
+multiple sources at a 
+time. 
+• Complex in operation. 
+• Designing the system with 
+effective control algorithms 
+will requires more capital 
+investment. 
+• Finding a faulty a system 
+is difficulty. 
+Off-grid Charging Station 
+• It doesn’t depend 
+on the grid power. 
+• It can be 
+implemented 
+anywhere from 
+remote places. 
+• Remote grids are 
+overloaded, need to 
+monitor simultaneously.  
+Table 5 
+Summary of the review aspects analyzed in Grid connected charging station.  
+Refs. 
+Highlights 
+Future Scope 
+[49, 
+53] 
+• Optimal number of chargers, 
+waiting spaces in the fast charging 
+stations are found out. 
+• Inclusion of Distributed 
+generators, Power distribution 
+network and transportation 
+network. 
+[50] 
+• Minimize total cost associated 
+with charging station. 
+• Considering traffic pattern, 
+charging demand of the electric 
+vehicles. 
+[50, 
+34, 
+52] 
+• Reduces network losses. 
+• Considers travel loss, land cost. 
+• Uncertainty in the input 
+parameters should be analyzed. 
+[51] 
+• Solves large problem. 
+• 5% optimality gap. 
+• The uncertainty in charging 
+behaviors should be estimated in 
+the design model. 
+[55] 
+• Peak shaving functions 
+implemented. 
+• More complex power system can 
+be used for the analysis.  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+10
+5.5. Off-grid mode 
+In order to have an environment friendly charging station one can 
+address off-grid charging mode. Off-grid charging mode doesn’t depend 
+on grid power. Off-grid charging station can be implemented in remote 
+units. But one must give utmost care for meeting the increasing demand 
+for electrical energy. Section 4.2.6 addresses off-grid charging mode. 
+Here charging station regarding off-grid mode is discussed. Off-grid 
+mode can be implemented where abundant amount of renewable en­
+ergy is available. But uncertainty of renewable energy production is one 
+of the key concerns. 
+5.6. Future research recommendations & research gaps 
+As per the literature survey of this paper, future research recom­
+mendations are jotted as follows:  
+• Improving the V2G technology can avoid peak demand sharing in the 
+power systems network. This can be cost beneficial to fleet owners by 
+selling the power. Upcoming fellow researchers have to focus more 
+on the power electronics technology to improve the V2G’s.  
+• As of now many literatures are focused on the grid connected EV 
+charging stations and there are few non-conventional EV charging 
+stations are developing. However, there is a research gap in inte­
+grating the EV charging station with non-conventional sources if this 
+can be sorted by improving the grid integration. Moreover, the major 
+advantage is the running cost of the electricity will scale down in 
+longer period.  
+• In the present EV marketing strategies competitors offering the 
+higher mileage’s, if the researchers will consider the advancements 
+in regenerative braking strategies.  
+• In recent years many optimal algorithms have been developed in 
+finding out the optimal locations and sizing. But the efficiency of the 
+system is decreases due to improvements are carried in conventional 
+algorithms. If researchers will focus on artificial intelligence and 
+machine learning based algorithms which will improve the efficiency 
+of the overall power system network.  
+• If BST can be improved the lifespan of the batteries will increases by 
+reducing the no of charge and discharge cycles.  
+• Researchers may focus on over current, under voltage stress and 
+losses in transmitting the power will reduces the impact on 
+transformers. 
+A total of 97 publications were referred in the review study. Fig. 7 
+shows the status of the referred publications year-wise. References were 
+taken from various reputated journals with high citations. And also 
+Fig. 7 shows that most of the referred publications were taken from the 
+year 2019. Fig. 8 shows various categories in which the review paper is 
+arranged. It can be seen that 50% of review paper is focused on the 
+design aspects of EVCS. Various optimization methods and techniques 
+are incorporated to promote the deployment of EVCS. 
+6. Conclusion 
+The review study gives an overview of electric vehicles, impacts of 
+electric vehicles, different charging modes, and various design methods 
+for EVCS. Here a set of publications are identified from the year 1997 to 
+2020 in Fig. 7. Numerous literatures were brought out in such a way that 
+various advancements in the charging station design are identified. 
+Charging station design can be categorized into different segments 
+depending on the power utilized. Due to the tremendous increase in the 
+Table 6 
+Summary of the review aspects analyzed in Grid connected charging station along with Renewable energy sources.  
+Refs. 
+Highlights 
+Future Scope  
+[60, 
+61]  
+• An optimum energy management is maintained.  
+• Reduction of losses.  
+• Unpredictable nature of renewable energy sources.  
+• Arrival and departure of large number of EVs.  
+• Variable market price. 
+[63, 
+64]    
+• Reduction in Power loss.  
+• Improves voltage stability.  
+• Reduction of charging costs.  
+• Uncertainty in input parameters. 
+[66, 
+67]  
+• Incorporation of renewable energy sources along with storage systems lessen the high 
+impact on the grid.  
+• Investment is high.  
+[70]  
+• Design of Photovoltaic system is performed.  
+• 10 kWh local storage.  
+• Reduction of grid power 25%.  
+• Solar tracking is not effective in winter. 
+[71, 
+73]   
+• Environmental emissions are considered.   
+• Vehicle to grid operations, renewable energy sources and energy storage system are carried 
+out.  
+• High cost. 
+[75]  
+• Investment needed for renewable energy sources, charging station, distribution network, 
+energy storage system is jointly considered.  
+• Uncertainty associated with renewable energy sources are considered.  
+• Electric vehicle can inject power into the network when unused. 
+[78]  
+• Solves large size problems in a bounded time.  
+• Variations in the state-of-charge, traffic patterns and electric power 
+should be analyzed in the future.  
+Table 7 
+Summary of Techniques used in the Design of EVCS.  
+Configurations for the design 
+of EVCS 
+Techniques/Optimization methods used 
+Utilizing only grid power. 
+Markovian Demand Characterization, Modified 
+primal-dual interior point algorithm, Genetic 
+Algorithm, Customized neighborhood search 
+strategy, Grid Partition method, Binary Firefly 
+Algorithm. 
+Utilizing grid power and ESS 
+Mathematical modeling, Python programming, 
+mixed integer linear programming model, Visual 
+programming language 
+Utilizing grid power and 
+Renewable energy 
+Mathematical modeling, Grasshopper optimization 
+Algorithm, Particle Swarm Optimization, Priority 
+Algorithm, Differential Evolution Algorithm, 
+Genetic Algorithm –Particle Swarm Optimization. 
+Utilizing grid power, 
+Renewable energy and ESS 
+Multi-Agent Particle Swarm Optimization, Mixed 
+integer linear programming, Genetic Algorithm, 
+Stochastic programming, Mathematical modeling, 
+K-means clustering Algorithm, Particle Swarm 
+optimization, Sample Average Approximation and 
+Progressive Hedging Algorithm. 
+Off-grid Charging Station 
+Stochastic Optimization Programming, 
+Microcontroller programming, Mathematical 
+modeling  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+11
+electric vehicles, the demand for utilizing electrical energy increases. 
+This creates a huge impact in the grid. Therefore, it is essential to 
+incorporate renewable energy technologies with grid. Due to the un­
+certainties in the renewable energy, it is essential to incorporate energy 
+storage systems. ESS can be used to store energy during excess renew­
+able energy production and release energy when required. The major 
+highlights of grid connected, renewable energy-based charging station, 
+off-grid mode is analyzed in the review study. Different methodologies, 
+optimization techniques and future scope are summarized and presented 
+in the review study for providing an optimal design for the charging 
+station. It can also identify that the usage of electric vehicle is directly 
+proportional to development of charging stations. Therefore, one must 
+give prior importance to the deployment of electric vehicles for a sus­
+tainable environment. 
+Declaration of Competing Interest 
+Authors having NO conflict of Interest. 
+References 
+[1] G. Fontaras, N.G. Zacharof, B. Ciuffo, Fuel consumption and CO2 emissions from 
+passenger cars in Europe – laboratory versus real-world emissions, Prog. Energy 
+Combust. Sci. 60 (2017) 97–131, https://doi.org/10.1016/j.pecs.2016.12.004. 
+[2] J. Gao, et al., Fuel consumption and exhaust emissions of diesel vehicles in 
+worldwide harmonized light vehicles test cycles and their sensitivities to eco- 
+driving factors, Energy Convers. Manag. 196 (2019) 605–613, https://doi.org/ 
+10.1016/j.enconman.2019.06.038. 
+[3] H. Hao, Z. Liu, F. Zhao, W. Li, W. Hang, Scenario analysis of energy consumption 
+and greenhouse gas emissions from China’s passenger vehicles, Energy 91 (2015) 
+151–159, https://doi.org/10.1016/j.energy.2015.08.054. 
+[4] F. Li, et al., Regional comparison of electric vehicle adoption and emission 
+reduction effects in China, Resour. Conserv. Recycl. 149 (September 2018) (2019) 
+714–726, https://doi.org/10.1016/j.resconrec.2019.01.038. 
+[5] L. Yuan, H. Zhao, H. Chen, B. Ren, Nonlinear MPC-based slip control for electric 
+vehicles with vehicle safety constraints, Mechatronics 38 (2016) 1–15, https://doi. 
+org/10.1016/j.mechatronics.2016.05.006. 
+[6] E.E. Michaelides, Thermodynamics and energy usage of electric vehicles, Energy 
+Convers. Manag. 203 (August 2019) (2020), 112246, https://doi.org/10.1016/j. 
+enconman.2019.112246. 
+[7] C. King, B. Datta, EV charging tariffs that work for EV owners, utilities and society, 
+Electr. J. 31 (9) (2018) 24–27, https://doi.org/10.1016/j.tej.2018.10.010. 
+[8] B. Csonka, C. Csisz´ar, Determination of charging infrastructure location for electric 
+vehicles, Transp. Res. Proc. 27 (2017) 768–775, https://doi.org/10.1016/j. 
+trpro.2017.12.115. 
+[9] X. Shi, J. Pan, H. Wang, H. Cai, Battery electric vehicles: what is the minimum 
+range required? Energy 166 (2019) 352–358, https://doi.org/10.1016/j. 
+energy.2018.10.056. 
+[10] S.H. Chung, T. Tancogne-Dejean, J. Zhu, H. Luo, T. Wierzbicki, Failure in lithium- 
+ion batteries under transverse indentation loading, J. Power Sources 389 
+(September 2017) (2018) 148–159, https://doi.org/10.1016/j. 
+jpowsour.2018.04.003. 
+[11] P. Tan, et al., Advances and challenges in lithium-air batteries, Appl. Energy 204 
+(2017) 780–806, https://doi.org/10.1016/j.apenergy.2017.07.054. 
+[12] F.H. Gandoman, et al., Concept of reliability and safety assessment of lithium-ion 
+batteries in electric vehicles: basics, progress, and challenges, Appl. Energy 251 
+(January) (2019), 113343, https://doi.org/10.1016/j.apenergy.2019.113343. 
+[13] T. Gnann, T.S. Stephens, Z. Lin, P. Pl¨otz, C. Liu, J. Brokate, What drives the market 
+for plug-in electric vehicles? - a review of international PEV market diffusion 
+models, Renew. Sustain. Energy Rev. 93 (March) (2018) 158–164, https://doi.org/ 
+10.1016/j.rser.2018.03.055. 
+[14] J. García-Villalobos, I. Zamora, J.I. San Martín, F.J. Asensio, V. Aperribay, Plug-in 
+electric vehicles in electric distribution networks: a review of smart charging 
+approaches, Renew. Sustain. Energy Rev. 38 (2014) 717–731, https://doi.org/ 
+10.1016/j.rser.2014.07.040. 
+[15] B. Lane, B. Shaffer, G.S. Samuelsen, Plug-in fuel cell electric vehicles: a California 
+case study, Int. J. Hydrogen Energy 42 (20) (2017) 14294–14300, https://doi.org/ 
+10.1016/j.ijhydene.2017.03.035. 
+[16] N. Sulaiman, M.A. Hannan, A. Mohamed, E.H. Majlan, W.R. Wan Daud, A review 
+on energy management system for fuel cell hybrid electric vehicle: issues and 
+challenges, Renew. Sustain. Energy Rev. 52 (2015) 802–814, https://doi.org/ 
+10.1016/j.rser.2015.07.132. 
+Fig. 7. Status of Reviewed References.  
+Fig. 8. Categories of Review paper.  
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+12
+[17] V. Das, S. Padmanaban, K. Venkitusamy, R. Selvamuthukumaran, F. Blaabjerg, 
+P. Siano, Recent advances and challenges of fuel cell based power system 
+architectures and control – a review, Renew. Sustain. Energy Rev. 73 (January) 
+(2017) 10–18, https://doi.org/10.1016/j.rser.2017.01.148. 
+[18] C.Y. Li, G.P. Liu, Optimal fuzzy power control and management of fuel cell/battery 
+hybrid vehicles, J. Power Sources 192 (2) (2009) 525–533, https://doi.org/ 
+10.1016/j.jpowsour.2009.03.007. 
+[19] W. Zhou, L. Yang, Y. Cai, T. Ying, Dynamic programming for New energy vehicles 
+based on their work modes part I: electric vehicles and hybrid electric vehicles, 
+J. Power Sources 406 (September) (2018) 151–166, https://doi.org/10.1016/j. 
+jpowsour.2018.10.047. 
+[20] X. Li, Y. Wang, D. Yang, Z. Chen, Adaptive energy management strategy for fuel 
+cell/battery hybrid vehicles using Pontryagin’s Minimal Principle, J. Power 
+Sources 440 (August) (2019), 227105, https://doi.org/10.1016/j. 
+jpowsour.2019.227105. 
+[21] W. Su, M.Y. Chow, Performance evaluation of an EDA-based large-scale plug-in 
+hybrid electric vehicle charging algorithm, IEEE Trans. Smart Grid 3 (1) (2012) 
+308–315, https://doi.org/10.1109/TSG.2011.2151888. 
+[22] H. Yoo, S.K. Sul, Y. Park, J. Jeong, System integration and power flow management 
+for a series hybrid electric vehicle using super-capacitors and batteries, in: 
+Conference Proceedings - IEEE Applied Power Electronics Conference and 
+Exposition - APEC 44, 2007, pp. 1032–1037, https://doi.org/10.1109/ 
+APEX.2007.357642. 
+[23] X. Tang, W. Yang, X. Hu, D. Zhang, A novel simplified model for torsional vibration 
+analysis of a series-parallel hybrid electric vehicle, Mech. Syst. Signal Process. 85 
+(2017) 329–338, https://doi.org/10.1016/j.ymssp.2016.08.020. 
+[24] X. Zeng, J. Wang, A parallel hybrid electric vehicle energy management strategy 
+using stochastic model predictive control with road grade preview, IEEE Trans. 
+Control Syst. Technol. 23 (6) (2015) 2416–2423, https://doi.org/10.1109/ 
+TCST.2015.2409235. 
+[25] F. Un-Noor, S. Padmanaban, L. Mihet-Popa, M.N. Mollah, E. Hossain, 
+A comprehensive study of key electric vehicle (EV) components, technologies, 
+challenges, impacts, and future direction of development, Energies 10 (8) (2017) 
+1–82, https://doi.org/10.3390/en10081217. 
+[26] Y. Zheng, Z.Y. Dong, Y. Xu, K. Meng, J.H. Zhao, J. Qiu, Electric vehicle battery 
+charging/swap stations in distribution systems: comparison study and optimal 
+planning, IEEE Trans. Power Syst. 29 (1) (2014) 221–229, https://doi.org/ 
+10.1109/TPWRS.2013.2278852. 
+[27] F. Ahmad, M.S. Alam, S.M. Shariff, A cost-efficient energy management system for 
+battery swapping station, IEEE Syst. J. 13 (4) (2019) 4355–4364, https://doi.org/ 
+10.1109/JSYST.2018.2890569. 
+[28] M.R. Sarker, H. Pandˇzi´c, M.A. Ortega-Vazquez, Optimal operation and services 
+scheduling for an electric vehicle battery swapping station, IEEE Trans. Power Syst. 
+30 (2) (2015) 901–910, https://doi.org/10.1109/TPWRS.2014.2331560. 
+[29] T.G. San Rom´an, I. Momber, M.R. Abbad, ´A. S´anchez Miralles, Regulatory 
+framework and business models for charging plug-in electric vehicles: 
+infrastructure, agents, and commercial relationships, Energy Policy 39 (10) (2011) 
+6360–6375, https://doi.org/10.1016/j.enpol.2011.07.037. 
+[30] S. Schey, Electric Vehicle Charging Infrastructure Deployment Guidelines British 
+Columbia. Canada, Osti Gov, 2009, pp. 1–11. 
+[31] S. Wee, M. Coffman, S.La Croix, Data on U.S. state-level electric vehicle 000, Data 
+Br 23 (2019), 103658, https://doi.org/10.1016/j.dib.2019.01.006. 
+[32] S. Bhattacharyya, P. Dutta, Handbook of research on swarm intelligence in 
+engineering, Handb. Res. Swarm Intell. Eng. 2 (2015) 1–743, https://doi.org/ 
+10.4018/978-1-4666-8291-7. 
+[33] M. Muratori, E. Kontou, J. Eichman, Electricity rates for electric vehicle direct 
+current fast charging in the United States, Renew. Sustain. Energy Rev. 113 
+(October 2018) (2019), 109235, https://doi.org/10.1016/j.rser.2019.06.042. 
+[34] P. Sadeghi-Barzani, A. Rajabi-Ghahnavieh, H. Kazemi-Karegar, Optimal fast 
+charging station placing and sizing, Appl. Energy 125 (2014) 289–299, https://doi. 
+org/10.1016/j.apenergy.2014.03.077. 
+[35] H. Shareef, M.M. Islam, A. Mohamed, A review of the stage-of-the-art charging 
+technologies, placement methodologies, and impacts of electric vehicles, Renew. 
+Sustain. Energy Rev. 64 (2016) 403–420, https://doi.org/10.1016/j. 
+rser.2016.06.033. 
+[36] C.H. Dharmakeerthi, N. Mithulananthan, T.K. Saha, Impact of electric vehicle fast 
+charging on power system voltage stability, Int. J. Electron. Power Energy Syst. 57 
+(2014) 241–249, https://doi.org/10.1016/j.ijepes.2013.12.005. 
+[37] A.Y.S. Lam, Y. Leung, S. Member, Electric vehicle charging station placement : 
+formulation, complexity, and solutions, IEEE Trans. Smart Grid 5 (6) (2014) 
+2846–2856, https://doi.org/10.1109/TSG.2014.2344684. 
+[38] N. Shahraki, H. Cai, M. Turkay, M. Xu, Optimal locations of electric public charging 
+stations using real world vehicle travel patterns, Transp. Res. Part D 41 (2015) 
+(2020) 165–176, https://doi.org/10.1016/j.trd.2015.09.011. 
+[39] I. Rahman, P.M. Vasant, B.S.M. Singh, M. Abdullah-Al-Wadud, N. Adnan, Review 
+of recent trends in optimization techniques for plug-in hybrid, and electric vehicle 
+charging infrastructures, Renew. Sustain. Energy Rev. 58 (2016) 1039–1047, 
+https://doi.org/10.1016/j.rser.2015.12.353. 
+[40] F. Malandrino, C. Casetti, C.F. Chiasserini, M. Reineri, A game-theory analysis of 
+charging stations selection by EV drivers, Perform. Eval. 83–84 (2015) 16–31, 
+https://doi.org/10.1016/j.peva.2014.11.001. 
+[41] Y. Xiong, J. Gan, B. An, C. Miao, A.L.C. Bazzan, Optimal electric vehicle fast 
+charging station placement based on game theoretical framework, IEEE Trans. 
+Intell. Transp. Syst. 19 (8) (2018) 2493–2504, https://doi.org/10.1109/ 
+TITS.2017.2754382. 
+[42] S. Yang, M. Wu, X. Yao, J. Jiang, Load modeling and identification based on ant 
+colony algorithms for EV charging stations, IEEE Trans. Power Syst. 30 (4) (2015) 
+1997–2003, https://doi.org/10.1109/TPWRS.2014.2352263. 
+[43] H. Yang, S. Yang, Y. Xu, E. Cao, M. Lai, Z. Dong, Electric vehicle route optimization 
+considering time-of-use electricity price by learnable partheno-genetic algorithm, 
+IEEE Trans. Smart Grid 6 (2) (2015) 657–666, https://doi.org/10.1109/ 
+TSG.2014.2382684. 
+[44] M. Chen, Z. Liu, X. Zhou, M. Xie, Y. Fu, Optimal planning of electric vehicle 
+charging station based on gravitational search algorithm, in: 2nd IEEE Conference 
+on Energy Internet Energy Systems Integration EI2 2018, 2018, pp. 1–6, https:// 
+doi.org/10.1109/EI2.2018.8582006. 
+[45] M.M. Vazifeh, H. Zhang, P. Santi, C. Ratti, Optimizing the deployment of electric 
+vehicle charging stations using pervasive mobility data, Transp. Res. Part A Policy 
+Pract. 121 (January 2017) (2019) 75–91, https://doi.org/10.1016/j. 
+tra.2019.01.002. 
+[46] C. Bian, H. Li, F. Wallin, A. Avelin, L. Lin, Z. Yu, Finding the optimal location for 
+public charging stations - a GIS-based MILP approach, Energy Proc. 158 (2019) 
+6582–6588, https://doi.org/10.1016/j.egypro.2019.01.071. 
+[47] Q. Dai, J. Liu, Q. Wei, Optimal photovoltaic/battery energy storage/electric vehicle 
+charging station design based onmulti-agent particle swarm optimization 
+algorithm, Sustainability 11 (7) (2019), https://doi.org/10.3390/su11071973. 
+[48] C.T. Ma, System planning of grid-connected electric vehicle charging stations and 
+key technologies: a review, Energies 12 (21) (2019), https://doi.org/10.3390/ 
+en12214201. 
+[49] Q. Yang, S. Sun, S. Deng, Q. Zhao, M. Zhou, Optimal sizing of PEV fast charging 
+stations with markovian demand characterization, IEEE Transactions on Smart 
+Grid 10 (4) (July 2019) 4457–4466, https://doi.org/10.1109/TSG.2018.2860783. 
+[50] Z. Liu, F. Wen, G. Ledwich, Optimal planning of electric-vehicle charging stations 
+in distribution systems, IEEE Transactions on Power Delivery 28 (1) (2013) 
+102–110, https://doi.org/10.1109/TPWRD.2012.2223489. 
+[51] Wang, C., He, F., Lin, X., Max Shen, Z.-J., Li, M., Designing locations and capacities 
+for charging stations to support intercity travel of electric vehicles: An expanded 
+network approach, Transportation Research Part C: Emerging Technologies, 
+Volume 102, 2019, Pages 210-232. doi:10.1016/j.trc.2019.03.013. 
+[52] M.M. Islam, A. Mohamed, H. Shareef, Optimal allocation of rapid charging stations 
+for electric vehicles, in: 2015 IEEE Student Conference Research and Development 
+SCOReD 2015, 2015, pp. 378–383, https://doi.org/10.1109/ 
+SCORED.2015.7449360. 
+[53] Ge, S., Feng, L., and Liu, H., The planning of electric vehicle charging station based 
+on Grid partition method, 2011 International Conference on Electrical and Control 
+Engineering, 2011, pp. 2726-2730, doi:10.1109/ICECENG.2011.6057636. 
+[54] Dunn, B., Kamath, H., Tarascon, J.M., Electrical energy storage for the grid: a 
+battery of choices. Science. 2011 Nov 18;334(6058):928-35. doi: 10.1126/scienc 
+e.1212741. PMID: 22096188. 
+[55] D. Sbordone, I. Bertini, B. Di Pietra, M.C. Falvo, A. Genovese, L. Martirano, EV fast 
+charging stations and energy storage technologies: A real implementation in the 
+smart micro grid paradigm, Electric Power Systems Research 120 (2015) 96–108, 
+https://doi.org/10.1016/j.epsr.2014.07.033. 
+[56] S. Negarestani, M. Fotuhi-Firuzabad, M. Rastegar, A. Rajabi-Ghahnavieh, Optimal 
+Sizing of Storage System in a Fast Charging Station for Plug-in Hybrid Electric 
+Vehicles," in, IEEE Transactions on Transportation Electrification 2 (4) (2016) 
+443–453, https://doi.org/10.1109/TTE.2016.2559165. 
+[57] B. Sun, T. Dragiˇcevi´c, F.D. Freijedo, J.C. Vasquez, J.M. Guerrero, A Control 
+Algorithm for Electric Vehicle Fast Charging Stations Equipped With Flywheel 
+Energy Storage Systems, IEEE Transactions on Power Electronics 31 (9) (2016) 
+6674–6685, https://doi.org/10.1109/TPEL.2015.2500962. 
+[58] D. Zhao, N. Thakur, J. Chen, Optimal design of energy storage system to buffer 
+charging infrastructure in smart cities, J. Manag. Eng. 36 (2) (2020) 4019048. 
+[59] He, Y., Song, Z., Liu, Z., Fast-charging station deployment for battery electric bus 
+systems considering electricity demand charges, Sustainable Cities and Society, 
+Volume 48, 2019, 101530, doi:10.1016/j.scs.2019.101530. 
+[60] Khan, W., Ahmad, F., Alam, Md S., Fast EV charging station integration with grid 
+ensuring optimal and quality power exchange, Engineering Science and 
+Technology, an International Journal, Volume 22, Issue 1, 2019, Pages 143-152, 
+doi:10.1016/j.jestch.2018.08.005. 
+[61] Rao Gampa, S. Jasthi, K., Goli, P., Das, D., Bansal, R.C., Grasshopper optimization 
+algorithm based two stage fuzzy multiobjective approach for optimum sizing and 
+placement of distributed generations, shunt capacitors and electric vehicle 
+charging stations, Journal of Energy Storage, Volume 27, 2020, 101117, doi:10 
+.1016/j.est.2019.101117. 
+[62] G.F. Savari, V. Krishnasamy, V. Sugavanam, et al., Optimal Charging Scheduling of 
+Electric Vehicles in Micro Grids Using Priority Algorithms and Particle Swarm 
+Optimization, Mobile Netw Appl 24 (2019) 1835–1847, https://doi.org/10.1007/ 
+s11036-019-01380-x. 
+[63] H. Mohammad Moradi, Mohammad Abedini, S.M. Reza Tousi, S. Mahdi 
+Hosseinian, Optimal siting and sizing of renewable energy sources and charging 
+stations simultaneously based on Differential Evolution algorithm, International 
+Journal of Electrical Power & Energy Systems 73 (2015) 1015–1024. 
+[64] M.R. Mozafar, M.H. Moradi, M.H. Amini, A simultaneous approach for optimal 
+allocation of renewable energy sources and electric vehicle charging stations in 
+smart grids based on improved GA-PSO algorithm, Sustain. Cities Soc. 32 (May) 
+(2017) 627–637, https://doi.org/10.1016/j.scs.2017.05.007. 
+[65] H. Mehrjerdi, R. Hemmati, Stochastic model for electric vehicle charging station 
+integrated with wind energy, Sustain. Energy Technol. Assessm. 37 (November 
+2019) (2020), https://doi.org/10.1016/j.seta.2019.100577. 
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
+Journal of Energy Storage 43 (2021) 103225
+13
+[66] J.A. Domínguez-Navarro, R. Dufo-L´opez, J.M. Yusta-Loyo, J.S. Artal-Sevil, J. 
+L. Bernal-Agustín, Design of an electric vehicle fast-charging station with 
+integration of renewable energy and storage systems, Int. J. Electr. Power Energy 
+Syst. 105 (March 2018) (2019) 46–58, https://doi.org/10.1016/j. 
+ijepes.2018.08.001. 
+[67] Y. Hu, K. Qian, H. Gao, Design of electric vehicle charging station based on genetic 
+algorithm, IOP Conf. Ser. Mater. Sci. Eng. 631 (5) (2019), https://doi.org/ 
+10.1088/1757-899X/631/5/052025. 
+[68] Hasan Mehrjerdi, Reza Hemmati, Electric vehicle charging station with multilevel 
+charging infrastructure and hybrid solar-battery-diesel generation incorporating 
+comfort of drivers, Journal of Energy Storage, Volume 26, 2019, 100924, doi:10 
+.1016/j.est.2019.100924. 
+[69] T.S. Biya, Design and power management of solar powered electric vehicle 
+charging station with energy storage system, in: 2019 3rd International Conference 
+on Electronics, Communication and Aerospace Technology, 2019, pp. 815–820. 
+[70] G.R.C. Mouli, P. Bauer, M. Zeman, System design for a solar powered electric 
+vehicle charging station for workplaces,, Applied Energy 168 (2016) (2020) 
+434–443, https://doi.org/10.1016/j.apenergy.2016.01.110. 
+[71] Omar Hafez, Kankar Bhattacharya, Optimal design of electric vehicle charging 
+stations considering various energy resources, Renewable Energy 107 (2017) 
+576–589, https://doi.org/10.1016/j.renene.2017.01.066. 
+[72] H. S´anchez-S´ainz, C.-A. García-V´azquez, F. Llorens Iborra, L.M. Fern´andez- 
+Ramírez, Methodology for the Optimal Design of a Hybrid Charging Station of 
+Electric and Fuel Cell Vehicles Supplied by Renewable Energies and an Energy 
+Storage System, Sustainability 11 (2019) 5743, https://doi.org/10.3390/ 
+su11205743. 
+[73] Clemente Capasso, Ottorino Veneri, Experimental study of a DC charging station 
+for full electric and plug in hybrid vehicles, Applied Energy 152 (2015) 131–142, 
+https://doi.org/10.1016/j.apenergy.2015.04.040. 
+[74] T. Li, J. Zhang, Y. Zhang, L. Jiang, B. Li, An optimal design and analysis of a hybrid 
+power charging station for electric vehicles considering uncertainties, in: IECON 
+2018 - 44th Annual Conference on IEEE Industrial Electronics Society 1, 2018, 
+pp. 5147–5152. 
+[75] R. Energy, J. Contreras, Impact of electric vehicles on the expansion planning of 
+distribution systems considering charging stations, IEEE Trans. Smart Grid 10 (1) 
+(2019) 794–804, https://doi.org/10.1109/TSG.2017.2752303. 
+[76] D.A. Savio, V.A. Juliet, B. Chokkalingam, S. Padmanaban, J.B. Holm-Nielsen, 
+F. Blaabjerg, Photovoltaic Integrated Hybrid Microgrid Structured Electric Vehicle 
+Charging Station and Its Energy Management Approach, Energies 12 (2019) 168, 
+https://doi.org/10.3390/en12010168. 
+[77] S. Li, H. Wu, X. Bai, S. Yang, Optimal dispatch for PV-assisted charging station of 
+electric vehicles, in: 2019 IEEE PES GTD Grand International Conference and 
+Exposition Asia (GTD Asia), 2019, pp. 854–859. 
+[78] Md A. Quddus, K. Mohannad, Md. Marufuzzaman, Modeling electric vehicle 
+charging station expansion with an integration of renewable energy and Vehicle- 
+to-Grid sources, Transportation Research Part E, Logistics and Transportation 
+Review 128 (2019) 251–279, https://doi.org/10.1016/j.tre.2019.06.006. 
+[79] Hasan Mehrjerdi, Off-grid solar powered charging station for electric and hydrogen 
+vehicles including fuel cell and hydrogen storage, International Journal of 
+Hydrogen Energy, Volume 44, Issue 23, 2019, Pages 11574-11583, doi:10.1016/j. 
+ijhydene.2019.03.158. 
+[80] A. Ahadi, S. Sarma, J.S. Moon, S. Kang, J.-H. Lee, A robust optimization for 
+designing a charging station based on solar and wind energy for electric vehicles of 
+a smart home in small villages, Energies 11 (2018) 1728, https://doi.org/10.3390/ 
+en11071728. 
+[81] Hassan Fathabadi, Novel stand-alone, completely autonomous and renewable 
+energy based charging station for charging plug-in hybrid electric vehicles 
+(PHEVs), Applied Energy, Volume 260, 2020, 114194, doi:10.1016/j.apenergy.201 
+9.114194. 
+[82] M. Ali, Modelling a solar charge station for electric vehicle with storage backup, in: 
+2019 1st International Conference on Advances in Science, Engineering and 
+Robotics Technology 2019, IEEE, 2019, pp. 1–4, https://doi.org/10.1109/ 
+ICASERT.2019.8934645. 
+[83] A. Khan, S. Memon, T.P. Sattar, Analyzing integrated renewable energy and smart- 
+grid systems to improve voltage quality and harmonic distortion losses at electric- 
+vehicle charging stations, IEEE Access 6 (2018) 26404–26415, https://doi.org/ 
+10.1109/ACCESS.2018.2830187. 
+[84] https://www.godigit.com/motor-insurance/car-insurance/find/best-electric-cars 
+-in-india. 
+[85] H. Shareef, Md.M. Islam, A. Mohamed, A review of the stage-of-the-art charging 
+technologies, placement methodologies, and impacts of electric vehicles, Renew. 
+Sustain. Energy Rev. 64 (2016) 403–420, https://doi.org/10.1016/j. 
+rser.2016.06.033. Pages. 
+[86] T.R. Hawkins, O.M. Gausen, A.H. Strømman, Environmental impacts of hybrid and 
+electric vehicles—a review, Int. J. Life Cycle Assess. 17 (2012) 997–1014, https:// 
+doi.org/10.1007/s11367-012-0440-9. 
+[87] C.C. Chan, Engineering philosophy of electric vehicles, in: IEEE International 
+Electric Machines and Drives Conference. IEMDC’99. Proceedings (Cat. 
+No.99EX272, 1999, pp. 255–257, https://doi.org/10.1109/IEMDC.1999.769084. 
+[88] M.M. Morcos, N.G. Dillman, C.R. Mersman, Battery chargers for electric vehicles, 
+IEEE Power Eng. Rev. 20 (11) (Nov. 2000) 8–11, https://doi.org/10.1109/ 
+39.883280. 
+[89] M. Ogura, Development of electric vehicles, JSAE Rev. 18 (1) (1997) 51–56, 
+https://doi.org/10.1016/S0389-4304(96)00062-8. Pages. 
+[90] X. Xu, Automotive power electronics-opportunities and challenges [for electric 
+vehicles], in: IEEE International Electric Machines and Drives Conference. 
+IEMDC’99. Proceedings (Cat. No.99EX272), 1999, pp. 260–262, https://doi.org/ 
+10.1109/IEMDC.1999.769086. 
+[91] W. Kempton, S.E. Letendre, Electric vehicles as a new power source for electric 
+utilities, Transp. Res. Part D: Transp. Environ. 2 (3) (1997) 157–175, https://doi. 
+org/10.1016/S1361-9209(97)00001-1. Pages. 
+[92] M.A Delucchi, T.E Lipman, An analysis of the retail and lifecycle cost of battery- 
+powered electric vehicles, Transp. Res. Part D: Transp. Environ. 6 (6) (2001) 
+371–404, https://doi.org/10.1016/S1361-9209(00)00031-6. Pages. 
+[93] C.C. Chan, K.T. Chau, An overview of power electronics in electric vehicles, IEEE 
+Trans. Ind. Electron. 44 (1) (Feb. 1997) 3–13, https://doi.org/10.1109/41.557493. 
+[94] A. Emadi, K. Rajashekara, S.S. Williamson, S.M. Lukic, Topological overview of 
+hybrid electric and fuel cell vehicular power system architectures and 
+configurations, IEEE Trans. Veh. Technol. 54 (3) (May 2005) 763–770, https://doi. 
+org/10.1109/TVT.2005.847445. 
+[95] K.T. Chau, Y.S. Wong, C.C. Chan, An overview of energy sources for electric 
+vehicles, Energy Convers. Manag. 40 (10) (1999) 1021–1039, https://doi.org/ 
+10.1016/S0196-8904(99)00021-7. Pages. 
+[96] K. Morita, Automotive power source in 21st century, JSAE Rev. 24 (1) (2003) 3–7, 
+https://doi.org/10.1016/S0389-4304(02)00250-3. Pages. 
+[97] T.E. Lipman, M.A. Delucchi, A retail and lifecycle cost analysis of hybrid electric 
+vehicles, Transp. Res. Part D: Transp. Environ. 11 (2) (2006) 115–132, https://doi. 
+org/10.1016/j.trd.2005.10.002. Pages. 
+R.P. Narasipuram and S. Mopidevi                                                                                                                                                                                                         
+
