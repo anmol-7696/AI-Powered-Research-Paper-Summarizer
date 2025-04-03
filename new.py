@@ -1,36 +1,61 @@
-import pandas as pd
+import torch
+from torch_geometric.datasets import Flickr
+from torch_geometric.nn import GCNConv
 import matplotlib.pyplot as plt
+import networkx as nx
 
-# Sample Data (Replace with your CSV file)
-data = {
-    "Source": ["A", "A", "B", "C", "D", "E", "E"],
-    "Target": ["Bat", "C", "D", "E", "E", "F", "G"]
-}
+# Load the Flickr dataset, forcing a fresh download
+dataset = Flickr(root='./data/Flickr', force_reload=True)
+data = dataset[0]  # Single graph
 
-# Convert to Pandas DataFrame
-df = pd.DataFrame(data)
+# Define a simple GNN model
+class GNN(torch.nn.Module):
+    def __init__(self):
+        super(GNN, self).__init__()
+        self.conv1 = GCNConv(dataset.num_features, 64)  # 500 features to 64
+        self.conv2 = GCNConv(64, dataset.num_classes)  # 7 classes
 
-# Extract unique nodes
-nodes = pd.concat([df["Source"], df["Target"]]).unique()
+    def forward(self, x, edge_index):
+        x = self.conv1(x, edge_index).relu()
+        x = self.conv2(x, edge_index)
+        return x
 
-# Create a position mapping for visualization
-node_positions = {node: (i, len(nodes) - i) for i, node in enumerate(nodes)}
+# Initialize model, optimizer, and loss
+model = GNN()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+criterion = torch.nn.CrossEntropyLoss()
 
-# Plot the Graph
-plt.figure(figsize=(10, 10))
+# Training loop
+model.train()
+for epoch in range(50):  # Short for demo
+    optimizer.zero_grad()
+    out = model(data.x, data.edge_index)
+    loss = criterion(out[data.train_mask], data.y[data.train_mask])
+    loss.backward()
+    optimizer.step()
+    if epoch % 10 == 0:
+        print(f"Epoch {epoch}, Loss: {loss.item():.4f}")
 
-for _, row in df.iterrows():
-    source, target = row["Source"], row["Target"]
-    x_values = [node_positions[source][0], node_positions[target][0]]
-    y_values = [node_positions[source][1], node_positions[target][1]]
-    plt.plot(x_values, y_values, 'k-', alpha=0.5)  # Edges
+# Evaluate and get predictions
+model.eval()
+with torch.no_grad():
+    pred = model(data.x, data.edge_index).argmax(dim=1)
 
-# Plot Nodes
-for node, (x, y) in node_positions.items():
-    plt.scatter(x, y, s=200, c='lightblue', edgecolors='black', zorder=3)
-    plt.text(x, y, node, fontsize=12, ha='center', va='center', fontweight='bold')
+# Visualization (small subset)
+G = nx.Graph()
+subset_size = 50
+for i in range(subset_size):
+    G.add_node(i)
+edges = data.edge_index.t().tolist()
+for edge in edges:
+    if edge[0] < subset_size and edge[1] < subset_size:
+        G.add_edge(edge[0], edge[1])
 
-plt.title("Graph Representation Using Pandas")
-plt.axis("off")
+# Color nodes by predicted labels
+colors = [pred[i].item() for i in range(subset_size)]
+pos = nx.spring_layout(G)
+plt.figure(figsize=(10, 8))
+nx.draw(G, pos, node_color=colors, with_labels=True, node_size=300, cmap=plt.cm.Set1)
+plt.title("Flickr Graph (Subset) with GNN Predicted Categories")
+plt.savefig('flickr_graph.png')  # Save for presentation
 plt.show()
-

@@ -1,3 +1,4 @@
+from pickle import TRUE
 import fitz  # PyMuPDF
 import requests
 import os
@@ -58,14 +59,22 @@ def save_text_to_file(text: str, output_file: str) -> None:
 if __name__ == "__main__":
     config = load_config()  # Load config values
 
-    pdf_url = config.get("pdf_url", "")
-    pdf_file = config.get("pdf_file", "downloaded_paper.pdf")
-    text_file = config.get("text_file", "extracted_text.txt")
-    timeout = config.get("timeout", 60)
+    pdf_config = config.get("pdf", {})  # Access the "pdf" section in config.json
+    logging_config = config.get("logging", {})
 
-    if pdf_url and download_pdf(pdf_url, pdf_file, timeout):
+    pdf_url = pdf_config.get("url", "")
+    pdf_file = pdf_config.get("local_path", "downloaded_paper.pdf")
+    text_file = pdf_config.get("extracted_text_path", "extracted_text.txt")
+    debug = logging_config.get("enable_debug", False)
+
+    if debug:
+        print(f"Loaded PDF URL: {pdf_url}")
+        print(f"Saving PDF to: {pdf_file}")
+        print(f"Extracted text file: {text_file}")
+
+    if pdf_url and download_pdf(pdf_url, pdf_file, 60):
         extracted_text = extract_text_from_pdf(pdf_file)
         if extracted_text:
             save_text_to_file(extracted_text, text_file)
-            if config.get("debug", False):
-                print(extracted_text[:1000])  # Print first 1000 characters for preview
+            #print(extracted_text)  # Printing extracted text
+
