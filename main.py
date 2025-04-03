@@ -1,9 +1,14 @@
 from pickle import TRUE
 import fitz  # PyMuPDF
+import nltk
 import requests
 import os
 import json
 from nltk.tokenize import sent_tokenize, word_tokenize
+
+nltk.download('punkt')
+
+#from gensim.summarization import summarize
 
 # Load configuration from JSON file
 def load_config(config_path: str = "config.json") -> dict:
