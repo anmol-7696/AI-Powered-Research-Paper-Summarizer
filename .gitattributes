@@ -1,0 +1,2 @@
+data/Flickr/raw/feats.npy filter=lfs diff=lfs merge=lfs -text
+data/Flickr/processed/data.pt filter=lfs diff=lfs merge=lfs -text
