@@ -8,6 +8,9 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 
 nltk.download('punkt')
 
+a = 10;
+b = 20;
+
 #from gensim.summarization import summarize
 
 # Load configuration from JSON file
